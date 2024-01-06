@@ -1,10 +1,8 @@
 <h1 align="center">Terminal Website</h1>
 Welcome to my personal terminal website! This website is built with simple HTML, CSS, and JavaScript, and it is intended to introduce myself briefly.
 <br/>
-You can access the website by clicking icon below : 
-<a href="https://limkimhoong.github.io/terminalWebsite"/](https://limkimhoong.github.io/terminalWebsite/)">
-        <img alt="Resume" title="Checkout My Resume in Web Form" src="https://custom-icon-badges.demolab.com/badge/-My%20Resume-green?style=for-the-badge&logoColor=white&logo=repo"/>
-</a>
+
+You can access the website by clicking [here](https://limkimhoong.github.io/terminalWebsite/)
 
 ## Getting Started
 To access this website, simply click on the link provided above. Once you land on the page, you will see a terminal interface where you can interact with the website.
