@@ -7,6 +7,7 @@ $(document).ready(function () {
     $("body").toggleClass("dark-mode");
     $("nav").toggleClass("dark");
     $("section").toggleClass("dark-section");
+    $("footer").toggleClass("dark-footer");
     lightMode = !lightMode;
   });
 });

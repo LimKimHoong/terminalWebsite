@@ -102,10 +102,14 @@ a {
 
 footer {
     text-align: center;
-    padding: 10px;
+    padding: 8px;
     background-color: #007BFF;
     color: #fff;
     position: fixed;
     width: 100%;
     bottom: 0;
+}
+
+.dark-footer{
+    background-color: #000000;
 }
