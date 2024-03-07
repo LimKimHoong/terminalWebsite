@@ -95,7 +95,7 @@
 
     <!-- // HOME BEGIN -->
 	<div id="home" class="home-bg" style="background-image: url('assets/img/blog/bgwall.webp')" data-stellar-background-ratio="0.6">
-		<video autoplay muted loop id="myVideo" style="width: 98.8vw;object-fit: cover;height: 100vh;"  >
+		<video autoplay muted loop id="myVideo" style="width: 100vw;object-fit: cover;height: 100vh;"  >
 			<source src="assets/img/blog/sky2.mp4" type="video/mp4">
 		  </video>
 		<div class="overlay">
@@ -108,7 +108,8 @@
 						</div>
 
 						<div data-aos="fade-zoom-in" data-aos-easing="ease-in-back" data-aos-delay="300" data-aos-offset="0">
-							<h1>Hi, I'm Lim Kim Hoong</h1>
+							<br>
+							<p class="line-1 anim-typewriter">Welcome! I'm Lim Kim Hoong ...</p>
 							<h3 id="text-rotator">
 								<div>AI Engineer</div>
 								<div>Data Scientist</div>
@@ -339,7 +340,6 @@
 						</div>
 					</div>
 				</div>
-
 			</div>
 		</div>
 	</section>
@@ -347,8 +347,13 @@
 
 	<!-- // PORTFOLIO BEGIN -->
 	<section id="portfolio">
+
+		<!-- UIkit CSS -->
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.19.1/dist/css/uikit.min.css" />
+
+		<!-- UIkit JS -->
 		<script src="https://cdn.jsdelivr.net/npm/uikit@3.19.1/dist/js/uikit.min.js"></script>
-		<link href="https://cdn.jsdelivr.net/npm/uikit@3.19.1/dist/css/uikit.min.css" rel="stylesheet">
+		<script src="https://cdn.jsdelivr.net/npm/uikit@3.19.1/dist/js/uikit-icons.min.js"></script>
 
 		<div class="col-md-12 text-center">
 			<h2>Projects</h2>
@@ -358,7 +363,7 @@
 			<div class="uk-timeline">
 				<div class="uk-timeline-item">
 					<div class="uk-timeline-icon">
-						<span class="uk-badge"><span uk-icon="check"></span></span>
+						<span class="uk-badge"><span uk-icon="file-edit"></span></span>
 					</div>
 
 					<!-- Item 1 -->
@@ -382,7 +387,7 @@
 				<!-- Item 2 -->
 				<div class="uk-timeline-item">
 					<div class="uk-timeline-icon">
-						<span class="uk-badge"><span uk-icon="check"></span></span>
+						<span class="uk-badge"><span uk-icon="file-edit"></span></span>
 					</div>
 					<div class="uk-timeline-content">
 						<div class="uk-card uk-card-default uk-margin-medium-bottom uk-overflow-auto">
@@ -404,7 +409,7 @@
 				<!-- Item 3 -->
 				<div class="uk-timeline-item">
 					<div class="uk-timeline-icon">
-						<span class="uk-badge"><span uk-icon="check"></span></span>
+						<span class="uk-badge"><span uk-icon="file-edit"></span></span>
 					</div>
 					<div class="uk-timeline-content">
 						<div class="uk-card uk-card-default uk-margin-medium-bottom uk-overflow-auto">
@@ -426,7 +431,7 @@
 				<!-- Item 4 -->
 				<div class="uk-timeline-item">
 					<div class="uk-timeline-icon">
-						<span class="uk-badge"><span uk-icon="check"></span></span>
+						<span class="uk-badge"><span uk-icon="file-edit"></span></span>
 					</div>
 					<div class="uk-timeline-content">
 						<div class="uk-card uk-card-default uk-margin-medium-bottom uk-overflow-auto">
@@ -533,39 +538,6 @@
 							Kuala Lumpur, Malaysia
 						</p>
 					</div>
-					<div class="clearfix"></div>
-				</div>
-
-				<div class="col-md-8 col-md-offset-2">
-					<form id="contact-form" name="contact" action="https://formspree.io/f/xqkrarwn" method="post">
-						<div class="row">
-							<div class="col-md-6 col-sm-6">
-								<div class="form-group">
-									<input type="text" name="name" id="name" class="form-control" placeholder="Name" required>
-									<p class="help-block text-danger"></p>
-								</div>
-							</div>
-							<div class="col-md-6 col-sm-6">
-								<div class="form-group">
-									<input type="email" name="email" id="email" class="form-control" placeholder="Email" required>
-									<p class="help-block text-danger"></p>
-								</div>
-							</div>
-						</div>
-						<div class="form-group">
-							<textarea name="message" id="message" class="form-control" rows="4" placeholder="Message..." required></textarea>
-							<p class="help-block text-danger"></p>
-						</div>
-
-						
-						<div class="col-md-12 col-xs-12">
-							<button id="submit" type="submit" name="submit" class="btn btn-dark">Send Message</button>
-						</div>
-
-						<p id="contact-form-status"></p>
-						
-					</form>
-				</div>
 			</div>
 		</div>
 	</section>
