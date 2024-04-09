@@ -1,29 +1,19 @@
+
 /* 01. TYPOGRAPHY
 =================================================*/
 
 h1,
 h2 {
-	font-family: 'Hind', sans-serif;
+	font-family: "San Francisco";
+	font-weight: bold;
+	font-size: 35px;
+  font-weight: 400;
+  src: url("https://applesocial.s3.amazonaws.com/assets/styles/fonts/sanfrancisco/sanfranciscodisplay-regular-webfont.woff");
 	margin: 0;
 	padding: 0;
 }
 
 h3,
-h4,
-h5,
-h6,
-p,
-a {
-	font-family: 'Lato', sans-serif;
-	margin: 0;
-	padding: 0;
-}
-
-h2 {
-	font-size: 2.7em;
-	margin-bottom: 20px;
-	color: #131313;
-}
 
 h4 {
 	font-weight: 600;
@@ -31,7 +21,17 @@ h4 {
 	color: #131313;
 }
 
+h5,
+h6,
+a {
+	font-family: 'Lato', sans-serif;
+	margin: 0;
+	padding: 0;
+}
+
 p {
+	font-family: "San Francisco";
+	src: url("https://applesocial.s3.amazonaws.com/assets/styles/fonts/sanfrancisco/sanfranciscodisplay-regular-webfont.woff");
 	color: #181a1b;
 	font-size: 16px;
 }
@@ -54,7 +54,7 @@ body {
     width: 24em;
     margin: 0 auto;
     border-right: 2px solid rgba(255,255,255,.75);
-	color: rgba(255,255,255,1);
+		color: rgba(255,255,255,1);
     font-size: 230%;
     text-align: center;
     white-space: nowrap;
@@ -374,6 +374,13 @@ body {
 	}
 }
 
+.floating-button-div {
+  position: fixed;
+  bottom: 30px;
+  right: 20px;
+}
+
+
 /* 04. NAVIGATION
 =================================================*/
 
@@ -513,11 +520,12 @@ body {
 }
 
 .profile-pic img {
-	width: 170px;
-	height: 170px;
+	width: 250px;
+	height: 250px;
 	border-radius: 50%;
-	border: 3px solid #fff;
-	margin: 0 auto;
+	border: 3px solid;
+	border-color:radial-gradient( circle 311px at 8.6% 27.9%,  rgba(62,147,252,0.57) 12.9%, rgba(239,183,192,0.44) 91.2% );
+	margin: 10 auto;
 }
 
 .home-text h1 {
@@ -577,7 +585,7 @@ body {
 
 #about {
 	padding: 90px 0 75px;
-	background: #ffffff;
+	background: #C5C5C5;
 }
 
 #about h2 {
@@ -595,7 +603,7 @@ body {
 }
 
 .social-icons {
-	padding-left: 0px;
+	padding-left: auto;
 }
 
 .social-icons li {
@@ -663,8 +671,8 @@ body {
 =================================================*/
 
 #skills {
-	padding: 95px 0 50px;
-	background: #ffffff;
+	padding: 90px 0 50px;
+	background: #f2f2f2;
 }
 
 #skills h2 {
@@ -897,22 +905,34 @@ header h1{
   float: none;
 }
 
-.time {
-  background: #00c4f3;
+.time-work {
+  background: radial-gradient( circle 897px at 9% 80.3%,  rgba(55,60,245,1) 0%, rgba(234,161,15,0.90) 100.2% );
   display: inline-block;
   padding: 8px;
 }
+
+.time-study {
+  background: radial-gradient( circle 975px at 2.6% 48.3%,  rgba(0,8,120,1) 0%, rgba(95,184,224,1) 99.7% );
+  display: inline-block;
+  padding: 8px;
+}
+
 
 .desc {
   position: relative;
   margin: 1em 0 0 0;
   padding: 1em;
   background: rgb(254,254,254);
-  -webkit-box-shadow: 0 0 1px rgba(0,0,0,0.20);
-  -moz-box-shadow: 0 0 1px rgba(0,0,0,0.20);
-  box-shadow: 0 0 1px rgba(0,0,0,0.20);
+  border-radius: 20px;
+  box-shadow: rgba(149,157,165,0.5) 0px 8px 20px;
   z-index: 15;
 }
+
+.desc:hover {
+    transform: scale(1.02);
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2);
+}
+
 
 .direction-l .desc,
 .direction-r .desc {
@@ -1038,38 +1058,111 @@ header h1{
 /* 08. PROJECT
 =================================================*/
 
-.uk-timeline .uk-timeline-item .uk-card {
-	max-height: 300px;
-}
-
-.uk-timeline .uk-timeline-item {
+#profile {
     display: flex;
-    position: relative;
+    justify-content: center;
+    align-items: center;
+    gap: 5rem;
+    height: 85vh;
 }
 
-.uk-timeline .uk-timeline-item::before {
-    background: #dadee4;
-    content: "";
-    height: 100%;
-    left: 19px;
-    position: absolute;
-    top: 20px;
-    width: 2px;
-	z-index: -1;
+.section_pic_container {
+    display: flex;
+    height: 475px;
+    width: 475px;
+    margin: auto 0;
 }
 
-.uk-timeline .uk-timeline-item .uk-timeline-icon .uk-badge {
-	margin-top: 20px;
-    width: 40px;
-    height: 40px;
+.section_text {
+    align-self: center;
+    text-align: center;
 }
 
-.uk-timeline .uk-timeline-item .uk-timeline-content {
-    -ms-flex: 1 1 auto;
-    flex: 1 1 auto;
-    padding: 0 0 0 1rem;
+.section_text p {
+    font-weight: 600;
 }
 
+.section_text_p1 {
+    text-align: center;
+}
+
+.section_text_p2 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.title_1 {
+    font-size: 3rem;
+    text-align: center;
+}
+
+.btn_container {
+    margin-top: 1.5rem;
+    text-align: center;
+}
+
+.btn_color {
+    background: linear-gradient(90deg, #6091cc, #ef8ebf);
+    border: none;
+    color: white;
+    padding: 1rem 1rem;
+    font-weight: 600;
+    border-radius: 2rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn_color:hover {
+    background-color: #4f7ebf;
+    transform: scale(1.05);
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+}
+
+.details_container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 3.5rem;
+    margin-top: 2rem;
+}
+
+.subdetail_container {
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 1.5rem;
+    max-width: 540px;
+    text-align: left;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease-in-out;
+}
+
+.subdetail_container:hover {
+    transform: scale(1.02);
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2);
+}
+
+.project_img {
+    max-width: 100%; /* Added */
+    max-height: 100%; /* Added */
+    margin-bottom: 1rem; /* Added for spacing */
+}
+
+.projects_subtitle{
+	font-family: "San Francisco";
+	font-weight: bold;
+	font-size: 35px;
+  font-weight: 400;
+  src: url("https://applesocial.s3.amazonaws.com/assets/styles/fonts/sanfrancisco/sanfranciscodisplay-regular-webfont.woff");
+}
+
+.content {
+	margin-bottom: 100px;
+}
 
 
 
@@ -1095,6 +1188,11 @@ header h1{
 
 /* 12. CERTIFICATES
 =================================================*/
+
+#certificates {
+	padding: 95px 0 50px;
+	background: #f2f2f2;
+}
 
 .svg {
 	position: fixed;
@@ -1149,8 +1247,6 @@ header h1{
   }
   
 
-
-  
 
 
 /* 13. CONTACT
@@ -1288,6 +1384,8 @@ fieldset {
 #footer {
 	padding: 20px 0 27px;
 	background: #fff;
+	font-family: "San Francisco";
+	src: url("https://applesocial.s3.amazonaws.com/assets/styles/fonts/sanfrancisco/sanfranciscodisplay-regular-webfont.woff");
 }
 
 #footer-post {
