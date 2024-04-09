@@ -23,16 +23,18 @@
 	<link rel="stylesheet" href="assets/css/flexslider.css">
 	<link rel="stylesheet" href="assets/css/aos.css">
 	
-
     <!-- main css -->
 	<link rel="stylesheet" href="assets/css/style.css">
 	<link rel="stylesheet" href="assets/css/style-responsives.css">
-		
+	<link rel="stylesheet" href="assets/css/mediaqueries.css">
 	
-	
-
     <!-- google fonts -->
 	<link href="https://fonts.googleapis.com/css?family=Hind:600|Lato:300,400" rel="stylesheet">
+
+		<!-- // FLOATING BUTTON END -->
+	<div class="floating-button-div">
+  		<a href="#contact" class="btn btn_color btn-lg smoth-scroll">Get in Touch</a>
+	</div>
 
 </head>
 <body>
@@ -46,15 +48,13 @@
 		</div>
 	</div> -->
 	<!-- // PRELOADER END -->
-
 	<div class="svg hide" id="svg"></div>
-
 
     <!-- // NAVIGATION BEGIN -->
 	<div id="navigation">
 		<div class="container">
 			<div class="row">
-				<div class="col-sm-3">
+				<div class="col-sm-3" >
 					<div class="logo">
 						<img src="assets/img/blog/logo.jpg" alt="" style="height: 35px; width: 35px; float: left; margin-top: -5px;border-radius: 50%;">
 						<a href="#" style="padding-left: 50px;">Lim Kim Hoong</a>
@@ -94,7 +94,7 @@
 
 
     <!-- // HOME BEGIN -->
-	<div id="home" class="home-bg" style="background-image: url('assets/img/blog/bgwall.webp')" data-stellar-background-ratio="0.6">
+	
 		<video autoplay muted loop id="myVideo" style="width: 100vw;object-fit: cover;height: 100vh;"  >
 			<source src="assets/img/blog/sky2.mp4" type="video/mp4">
 		  </video>
@@ -128,31 +128,30 @@
     <!-- // ABOUT BEGIN -->
 	<section id="about">
 		<div class="container">
-			<div class="row">
-				<div class="col-md-6 col-sm-6 col-xs-12">
+			<div class="col-md-6 col-sm-6 col-xs-12">
 					<!-- Inserted image here -->
 					<img src="assets/img/blog/da.jpg" alt="Description of Image" class="img-responsive" />
-				</div>
-
+			</div>
+			<div class="row">
 				<div class="description col-md-6 col-sm-6 col-xs-12">
-					<h2>A Senior Data Analyst in OKX.</h2>
-					<p>Welcome to my portfolio website!<br>I am a passionate Data Scientist. Proficient in Python, SQL, Excel and Power BI.<br><br>
+    				<h2>A Senior Data Analyst in OKX</h2>
+    				<p>Welcome to my portfolio website!<br>I am a passionate Data Scientist. Proficient in Python, SQL, Excel, and Power BI.<br><br>
 
-					On this website, you'll find a showcase of my projects and certifications that highlight my skills and innovative approach to problem-solving. If you are in search of a Data Scientist dedicated to achieving excellence, I invite you to connect and work with me to create something truly outstanding together.
-				</p>
-
-
-					<ul class="social-icons">
-						<li><a href="https://github.com/LimKimHoong" target="_blank"><i class="fa fa-github"></i></a></li>
-						<li><a href="https://www.linkedin.com/in/lim-kim-hoong-0757591ba/" target="_blank"><i class="fa fa-linkedin"></i></a></li>
-					</ul>
-
-					<p>
-						<a href="assets/Resume_LimKimHoong.pdf" target="_blank" class="btn btn-dark with-arrow smoth-scroll" >My Resume
-							<i class="fa fa-download"></i>
-						</a>
-					</p>
+    				On this website, you'll find a showcase of my projects and certifications that highlight my skills and innovative approach to problem-solving. If you are in search of a Data Scientist dedicated to achieving excellence, I invite you to connect and work with me to create something truly outstanding together.
+    				</p>
 				</div>
+
+
+				<ul class="social-icons">
+					<li><a href="https://github.com/LimKimHoong" target="_blank"><i class="fa fa-github"></i></a></li>
+					<li><a href="https://www.linkedin.com/in/lim-kim-hoong-0757591ba/" target="_blank"><i class="fa fa-linkedin"></i></a></li>
+				</ul>
+				<p>
+				<a href="assets/Resume_LimKimHoong.pdf" target="_blank" class="btn btn_color with-arrow smoth-scroll" >My Resume
+				<i class="fa fa-download"></i>
+				</a>
+				</p>
+			</div>
 
 			</div>
 		</div>
@@ -162,10 +161,10 @@
 	<!-- // EXPERIENCE BEGIN -->
 	<section id="experience">
 		<ul class="timeline">
-			<div class="col-md-12 text-center">
+			<div class="col-md-12 text-center" >
 				<h2>Experience</h2>
-
 			</div>
+			<br>
 			<!-- Item 1 -->
 			<br>
 			<li>
@@ -173,10 +172,10 @@
 				<div class="flag-wrapper">
 				  <span class="hexa"></span>
 				  <span class="flag" title="OKX operates as a leading cryptocurrency exchange and trading platform, offering a wide range of services including spot and futures trading, to empower individuals and businesses with access to the digital asset economy.">OKX</span>
-				  <span class="time-wrapper"><span class="time">Aug 2023 - Present</span></span>
+				  <span class="time-wrapper"><span class="time-work">Aug 2023 - Present</span></span>
 				</div>
-				<div class="desc">- Performed data cleaning, transformation, data quality check and EDA in <strong>Python</strong> and <strong>Power BI</strong>.</div>
-				<div class="desc">- Enhanced the efficiency of process flow by <strong>50%</strong> by creating an automated workflow for web scraping, utilizing <strong>Python</strong> and <strong>Selenium</strong> for data collection. </div>
+				<p class="desc">- Performed data cleaning, transformation, data quality check and EDA in <strong>Python</strong> and <strong>Power BI</strong>.</p>
+				<p class="desc">- Enhanced the efficiency of process flow by <strong>50%</strong> by creating an automated workflow for web scraping, utilizing <strong>Python</strong> and <strong>Selenium</strong> for data collection. </p>
 			  </div>
 			</li>
 
@@ -186,9 +185,9 @@
 				  <div class="flag-wrapper">
 					<span class="hexa"></span>
 					<span class="flag" title="The University of Malaya stands as Malaysia's premier institution of higher learning, dedicated to advancing knowledge, fostering academic excellence, and contributing to the nation's development through research, education, and community engagement.">Universiti of Malaya (UM)</span>
-					<span class="time-wrapper"><span class="time">Mar 2022 - Jul 2023</span></span>
+					<span class="time-wrapper"><span class="time-study">Mar 2022 - Jul 2023</span></span>
 				  </div>
-				  <div class="desc">- Master of Data Science with Distinction, majoring in Computer Vision (CGPA: 3.98/4)</div>
+				  <p class="desc">- Master of Data Science with Distinction, majoring in Computer Vision (CGPA: 3.98/4)</p>
 				</div>
 			  </li>
 
@@ -198,11 +197,11 @@
 				<div class="flag-wrapper">
 				  <span class="hexa"></span>
 				  <span class="flag" title="Bursa Malaysia Berhad operates as Malaysia's principal securities exchange, offering a comprehensive range of trading, clearing, settlement, and depository services, facilitating capital market growth and development in the region.">Bursa Malaysia Berhad</span>
-				  <span class="time-wrapper"><span class="time">Dec 2020 - Aug 2023</span></span>
+				  <span class="time-wrapper"><span class="time-work">Dec 2020 - Aug 2023</span></span>
 				</div>
-				<div class="desc">- Established legacy <strong>VBA</strong> procedures, constructing innovative data infrasturcutures that evevated data processing speeds.</div>
-				<div class="desc">- Crafted and refined over 3 <strong>Power BI interactive dashboards</strong> to track crucial quality management metrics, achieving an <strong>60%</strong> improvement in real-time data processing, and monitoring daily.</div>
-				<div class="desc">- Achieved a time reduction of <strong>70%</strong> in data verification for Bursa Trade Securities 2 (“BTS2”) Tech. Refresh (“TR”) project by utilizing <strong>Python</strong>.</div>
+				<p class="desc">- Established legacy <strong>VBA</strong> procedures, constructing innovative data infrasturcutures that evevated data processing speeds.</p>
+				<p class="desc">- Crafted and refined over 3 <strong>Power BI interactive dashboards</strong> to track crucial quality management metrics, achieving an <strong>60%</strong> improvement in real-time data processing, and monitoring daily.</p>
+				<p class="desc">- Achieved a time reduction of <strong>70%</strong> in data verification for Bursa Trade Securities 2 (“BTS2”) Tech. Refresh (“TR”) project by utilizing <strong>Python</strong>.</p>
 			  </div>
 			</li>
 		  
@@ -212,9 +211,9 @@
 				  <div class="flag-wrapper">
 					<span class="hexa"></span>
 					<span class="flag" title="IBM Corp. is a global technology and consulting company, offering a wide array of services including cloud computing, artificial intelligence, software development, and systems integration, aimed at driving innovation and transformation for businesses and societies worldwide.">IBM Corporation</span>
-					<span class="time-wrapper"><span class="time">Oct 2019 - Dec 2019</span></span>
+					<span class="time-wrapper"><span class="time-work">Oct 2019 - Dec 2019</span></span>
 				  </div>
-				  <div class="desc">- Performed data collection, transformation, cleaning, and exploratory data analysis in <strong>Excel</strong>.</div>
+				  <p class="desc">- Performed data collection, transformation, cleaning, and exploratory data analysis in <strong>Excel</strong>.</p>
 				</div>
 			  </li>
 			
@@ -224,10 +223,10 @@
 				  <div class="flag-wrapper">
 					<span class="hexa"></span>
 					<span class="flag" title="University Tunku Abdul Rahman (UTAR) is a distinguished private university in Malaysia, committed to delivering excellence in education and research across a wide range of disciplines, aiming to nurture holistic, socially responsible, and globally competitive graduates.">Universiti Tunku Abdul Rahman (UTAR)</span>
-					<span class="time-wrapper"><span class="time">May 2017 - Oct 2020</span></span>
+					<span class="time-wrapper"><span class="time-study">May 2017 - Oct 2020</span></span>
 				  </div>
-				  <div class="desc">- Bachelor of Science (HONS) Financial Mathematics with Merit (CGPA: 3.59/4)</div>
-				  <div class="desc">- Recognition: President’s List (Oct 2018 & May 2019), Dean’s List (May 2018 & Jan 2019), Distinction in Soft Skills Development Certificate Program (USSDC)</div>
+				  <p class="desc">- Bachelor of Science (HONS) Financial Mathematics with Merit (CGPA: 3.59/4)</p>
+				  <p class="desc">- Recognition: President’s List (Oct 2018 & May 2019), Dean’s List (May 2018 & Jan 2019), Distinction in Soft Skills Development Certificate Program (USSDC)</p>
 				</div>
 			  </li>
 			
@@ -347,113 +346,84 @@
 
 	<!-- // PORTFOLIO BEGIN -->
 	<section id="portfolio">
-
-		<!-- UIkit CSS -->
-		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.19.1/dist/css/uikit.min.css" />
-
-		<!-- UIkit JS -->
-		<script src="https://cdn.jsdelivr.net/npm/uikit@3.19.1/dist/js/uikit.min.js"></script>
-		<script src="https://cdn.jsdelivr.net/npm/uikit@3.19.1/dist/js/uikit-icons.min.js"></script>
-
 		<div class="col-md-12 text-center">
+			<br><br>
 			<h2>Projects</h2>
 		</div>
+		<div class="container">
+			<div class="details_container color_container">
+				<div class="subdetail_container">
+                        <img src="./assets/img/blog/project1.png" class="project_img"/>
+                        <div class="content"></div>
+                        	<div class="projects_subtitle">Web App with Streamlit and Python</div>
+                        	<br>
+                        	<div class="btn_container">
+                            	<button class="btn btn_color project_btn"
+                            	onclick="location.href='https://github.com/LimKimHoong/Prediction-on-Streamlit'">View Code</button>
+                            	<button class="btn btn_color project_btn"
+                            	onclick="location.href='https://www.coursera.org/account/accomplishments/verify/BJHPZ9EJRGJ2?utm_source=link&utm_medium=certificate&utm_content=cert_image&utm_campaign=sharing_cta&utm_product=project'">View Certificate</button>
+                        	</div>
+                        	<br>
+                        	<p>📝 Built a beautiful and interactive <strong>web app</strong> that generates classification algorithm and dashboard in displaying their results</p> 
+                        	
 
-		<div class="uk-container uk-padding">
-			<div class="uk-timeline">
-				<div class="uk-timeline-item">
-					<div class="uk-timeline-icon">
-						<span class="uk-badge"><span uk-icon="file-edit"></span></span>
-					</div>
+                </div>
 
-					<!-- Item 1 -->
-					<div class="uk-timeline-content">
-						<div class="uk-card uk-card-default uk-margin-medium-bottom uk-overflow-auto">
-							<div class="uk-card-header">
-								<div class="uk-grid-small uk-flex-middle" uk-grid>
-									<h3 class="uk-card-title"><time datetime="2023-01-31">Build a Machine Learning Web App with Streamlit and Python</time></h3>
-									<a href="https://github.com/LimKimHoong/Prediction-on-Streamlit" class="uk-label uk-label-success uk-margin-auto-left">
-										<span>Code</span>
-									</a>
-								</div>
-							</div>
-							<div class="uk-card-body">
-								<p>📝 Built a beautiful and interactive <strong>web app</strong> that generates classification algorithm and dashboard in displaying their results</p>
-							</div>
-						</div>
-					</div>
-				</div>
+                <div class="subdetail_container">
+                        <img src="./assets/img/blog/project4.jpg" class="project_img"/>
+                        <div class="content"></div>
+                        	<div class="projects_subtitle">M16 Touri-Scope Dashboard</div>
+                        	<br>
+                        	<div class="btn_container">
+                        		<button class="btn btn_color project_btn"
+                            	onclick="location.href='https://github.com/LimKimHoong/Travel-Trend'">View Code</button>
 
-				<!-- Item 2 -->
-				<div class="uk-timeline-item">
-					<div class="uk-timeline-icon">
-						<span class="uk-badge"><span uk-icon="file-edit"></span></span>
-					</div>
-					<div class="uk-timeline-content">
-						<div class="uk-card uk-card-default uk-margin-medium-bottom uk-overflow-auto">
-							<div class="uk-card-header">
-								<div class="uk-grid-small uk-flex-middle" uk-grid>
-									<h3 class="uk-card-title"><time datetime="2023-01-31">Build a Chatbot to Analyze PDF Files using LLM</time></h3>
-									<a href="https://github.com/LimKimHoong/PDF-GPT" class="uk-label uk-label-success uk-margin-auto-left">
-										<span>Code</span>
-									</a>
-								</div>
-							</div>
-							<div class="uk-card-body">
-								<p>📝 Built a complete local hosted Chatbot, connected to <strong>OpenAI API</strong> by utilizing <strong>Flask, Langchain and HTML</strong>.</p>
-							</div>
-						</div>
-					</div>
-				</div>
-				
-				<!-- Item 3 -->
-				<div class="uk-timeline-item">
-					<div class="uk-timeline-icon">
-						<span class="uk-badge"><span uk-icon="file-edit"></span></span>
-					</div>
-					<div class="uk-timeline-content">
-						<div class="uk-card uk-card-default uk-margin-medium-bottom uk-overflow-auto">
-							<div class="uk-card-header">
-								<div class="uk-grid-small uk-flex-middle" uk-grid>
-									<h3 class="uk-card-title"><time datetime="2023-01-31">Chinese Handwritten Digit Recognition using Machine</time></h3>
-									<a href="https://github.com/LimKimHoong/Chinese-Handwritten-Digit-Recognition" class="uk-label uk-label-success uk-margin-auto-left">
-										<span>Code</span>
-									</a>
-								</div>
-							</div>
-							<div class="uk-card-body">
-								<p>📝 Achieved an accuracy of <strong>98.93%</strong> with an average time of <strong>44</strong> seconds per epoch for a self-designed architecture of <strong>Convolutional Neural Network (CNN)</strong> in recognizing <strong>15,000</strong> Chinese handwritten digits</p>
-							</div>
-						</div>
-					</div>
-				</div>
-
-				<!-- Item 4 -->
-				<div class="uk-timeline-item">
-					<div class="uk-timeline-icon">
-						<span class="uk-badge"><span uk-icon="file-edit"></span></span>
-					</div>
-					<div class="uk-timeline-content">
-						<div class="uk-card uk-card-default uk-margin-medium-bottom uk-overflow-auto">
-							<div class="uk-card-header">
-								<div class="uk-grid-small uk-flex-middle" uk-grid>
-									<h3 class="uk-card-title"><time datetime="2023-01-31">M16 Touri-Scope Dashboard in R programming language</time></h3>
-									<a href="https://wqd7001-2021-2022-group7.shinyapps.io/Tourism_of_Malaysia_M14/" class="uk-label uk-label-success uk-margin-auto-left">
-										<span>Website</span>
-									</a>
-								</div>
-							</div>
-							<div class="uk-card-body">
-								<p>📝 Provided a comprehensive overview of travel trends and patterns around the globe to Malaysia on pre and post pandemic, allowing for data-driven insights and strategic decisions to be made based on the highlighted patterns and key indicators</p>
-							</div>
-						</div>
-					</div>
-				</div>
+                            	<button class="btn btn_color project_btn"
+                            	onclick="location.href='https://wqd7001-2021-2022-group7.shinyapps.io/Tourism_of_Malaysia_M14/'">View Website</button>
+                        	</div>
+                        	<br>
+                        	<p>📝 Provided a comprehensive overview of travel trends and patterns around the globe to Malaysia on pre and post pandemic, allowing for data-driven insights and strategic decisions to be made based on the highlighted patterns and key indicators</p>
+                        	
+                </div>
 
 
-			</div>
-		</div>
-        
+                <div class="subdetail_container">
+                    <img src="./assets/img/blog/project2.jpg" class="project_img"/>
+                    <div class="content"></div>
+                    	<div class="projects_subtitle">PDF-GPT with LLM</div>
+                    	<br>
+                    	<div class="btn_container">
+                        	<button class="btn btn_color project_btn"
+                         	onclick="location.href='https://github.com/LimKimHoong/PDF-GPT'">View Code</button>
+                        	<button class="btn btn_color project_btn"
+                         	onclick="location.href='https://courses.cognitiveclass.ai/certificates/55c9583a01f841238bca685e4af2401b'">View Certificate</button>
+                		</div>
+                		<br>
+                    	<p>📝 Built a complete local hosted Chatbot, connected to <strong>OpenAI API</strong> by utilizing <strong>Flask, Langchain and HTML</strong>.</p> 
+                    	
+
+                </div>
+                    <div class="subdetail_container">
+                        <img src="./assets/img/blog/project3.png" class="project_img"/>
+                        <div class="content"></div>
+                        	<div class="projects_subtitle">Chinese Written Digit Recognition</div>
+                        	<br>
+                        	<div class="btn_container">
+                            	<button class="btn btn_color project_btn"
+                            	onclick="location.href='https://github.com/LimKimHoong/Chinese-Handwritten-Digit-Recognition'">View Code</button>
+                            	<button class="btn btn_color project_btn"
+                            	onclick="location.href='https://github.com/LimKimHoong/Chinese-Handwritten-Digit-Recognition/blob/main/Chinese%20Handwritten%20Digit%20Recognition%20using%20Machine%20Learning%202.pdf'">View Paper</button>
+                        	</div>
+                        	<br>
+                        	<p>📝 Achieved an accuracy of <strong>98.93%</strong> with an average time of <strong>44</strong> seconds per epoch for a self-designed architecture of <strong>Convolutional Neural Network (CNN)</strong> in recognizing <strong>15,000</strong> Chinese handwritten digits</p>
+                        	
+                </div>
+
+              
+                </div>
+            </div>     
+		
+    <br><br>
             
 	</section>
 	<!-- // PORTFOLIO END -->
@@ -461,28 +431,27 @@
 	<!-- // Certificates -->
 
 	<section id="certificates">
+		<div class="col-md-12 text-center">
+			<br><br>
+			<h2>Certificates</h2>
+		</div>
+
 		<div class="container">
-			
-			<div style="text-align:center">
-				<h2>Certificates</h2>
-			</div>
-			
 			<!-- The four columns -->
 			<div class="row">
 				<div class="grid col-md-4 col-sm-6 col-xs-12">
 					<a href="assets/img/certificates/google_analytics.pdf" class="image-popup">
-					<img src="assets/img/certificates/google_analytics.pdf" alt="Google Data Analytics" style="width:90%" onclick="myFunction(this);"></a>
+					<img src="assets/img/certificates/google_analytics.pdf" alt="Google Data Analytics" style="width:90%" onclick="myFunction(this);">Google Data Analytics</a>
 				</div>
 
 				<div class="grid col-md-4 col-sm-6 col-xs-12">
-					
 					<a href="assets/img/certificates/deeplearningAI.pdf" class="image-popup">
-					<img src="assets/img/certificates/deeplearningAI.pdf" alt="Deep Learning AI" style="width:90%" onclick="myFunction(this);"></a>
+					<img src="assets/img/certificates/deeplearningAI.pdf" alt="Deep Learning AI" style="width:90%" onclick="myFunction(this);">DeepLearning.AI - Analyze Datasets and Train ML Models using AutoML</a>
 				</div>
 
 				<div class="grid col-md-4 col-sm-6 col-xs-12">
 					<a href="assets/img/certificates/KPMG.pdf" class="image-popup">
-					<img src="assets/img/certificates/KPMG.pdf" alt="KPMG Data Analytics" style="width:90%" onclick="myFunction(this);"></a>
+					<img src="assets/img/certificates/KPMG.pdf" alt="KPMG Data Analytics" style="width:90%" onclick="myFunction(this);">KPMG - Data Analytics Consulting Virtual Intership</a>
 				</div>
 			</div>
 		</div>
@@ -495,9 +464,13 @@
 	<section id="hire">
 		<div class="container">
 			<div class="row">
-				<div class="col-md-9 col-sm-6 col-xs-12">
-					<h2>Summary</h2>
-					<p>
+				<div class="col-md-12 col-sm-5 col-xs-15">
+					<div class="col-md-12 text-center">
+						<h2>Summary</h2>
+					</div>
+					<br>
+					<p style="text-align: center">
+						<br>
 						Experienced Data Analyst with a Master's in Data Science and a background in Financial Mathematics. Currently a Senior Data Analyst at OKX, Malaysia, specializing in data collection, processing, verification, and labeling for AI modeling. 
 						<br>
 						<br>
@@ -505,12 +478,6 @@
 						<br>
 						<br>
 						Proficient in Python, R, and various data analysis tools, with certifications in IBM Data Science and Machine Learning. Demonstrated expertise in machine learning, data visualization, and computer vision.<br>
-					</p>
-				</div>
-
-				<div class="col-md-3 col-sm-6 col-xs-12">
-					<p>
-						<a href="#contact" class="btn btn-dark btn-lg smoth-scroll">Get in Touch</a>
 					</p>
 				</div>
 			</div>
@@ -525,14 +492,13 @@
 				<div class="col-md-12 text-center">
 					<h2>Contact Me</h2>
 				</div>
+				<div class="address-icons row justify-content-center">
+    				<div class="col-md-6 col-sm-6 text-center">
+        				<i class="fa fa-envelope fa-2x"></i>
+        				<p>kimhoong0324@gmail.com</p>
+    				</div>
 
-				<div class="address-icons col-md-8 col-md-offset-3">
-					<div class="col-md-4 col-sm-4">
-						<i class="fa fa-envelope fa-2x"></i>
-						<p>kimhoong0324@gmail.com</p>
-					</div>
-
-					<div class="col-md-4 col-sm-4">
+					<div class="col-md-6 col-sm-6">
 						<i class="fa fa-map-marker fa-2x"></i>
 						<p>
 							Kuala Lumpur, Malaysia
@@ -552,8 +518,6 @@
 		</div>
 	</footer>
 	<!-- // FOOTER END -->
-
-
 
 
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.7.13/lottie.min.js" integrity="sha512-srGxQe2w7s50+5/nNgEVKYtBm15zRylJwdjxYnGEZr3mmHFJKFjA/ImA2OKizVzoIDX8XISMHDI1+az9pnumbQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
