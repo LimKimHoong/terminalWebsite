@@ -585,7 +585,7 @@ body {
 
 #about {
 	padding: 90px 0 75px;
-	background: #C5C5C5;
+	background: #E5E5E5;
 }
 
 #about h2 {
@@ -620,7 +620,7 @@ body {
 	display: inline-block;
 	display: -moz-inline-stack;
 	width: 50px;
-	height: 40px;
+	height: 50px;
 	box-sizing: border-box;
 	-webkit-transition: all ease-in-out 0.3s;
 	transition: all ease-in-out 0.3s;
@@ -631,7 +631,7 @@ body {
 }
 
 .social-icons li a i {
-	font-size: 1.3em;
+	font-size: 2em;
 }
 
 .facts {
@@ -672,7 +672,7 @@ body {
 
 #skills {
 	padding: 90px 0 50px;
-	background: #f2f2f2;
+	background: #E5E5E5;
 }
 
 #skills h2 {
@@ -703,7 +703,7 @@ body {
 
 .progress-box .progress {
 	box-shadow: none;
-	height: 6px;
+	height: 30px;
 }
 
 .progress-box .progress-bar {
@@ -713,7 +713,7 @@ body {
 }
 
 .bg-color-base {
-	background: #48b14d !important;
+	background-image: linear-gradient(to bottom right, #009245, #FCEE21);
 }
 
 .color-heading {
@@ -837,7 +837,12 @@ header h1{
   bottom: -4px;
 }
 
-.direction-l,
+.direction-l {
+  float: none;
+  width: 100%;
+  text-align: left;
+}
+
 .direction-r {
   float: none;
   width: 100%;
@@ -849,16 +854,29 @@ header h1{
   position: relative;
 }
 
-.flag {
+.flag_work {
   position: relative;
   display: inline;
-  background: rgb(255,255,255);
+  background-image: linear-gradient(to bottom right, #305170, #6DFC6B);
   font-weight: 600;
   z-index: 15;
   padding: 6px 10px;
   text-align: left;
   border-radius: 5px;
+  color: #fff
 }
+
+.flag_study {
+	position: relative;
+	display: inline;
+	background-image: linear-gradient(to bottom right, #00C0FF, #4218B8);
+	font-weight: 600;
+	z-index: 15;
+	padding: 6px 10px;
+	text-align: left;
+	border-radius: 5px;
+	color: #fff
+  }
 
 .direction-l .flag:after,
 .direction-r .flag:after {
@@ -905,19 +923,6 @@ header h1{
   float: none;
 }
 
-.time-work {
-  background: radial-gradient( circle 897px at 9% 80.3%,  rgba(55,60,245,1) 0%, rgba(234,161,15,0.90) 100.2% );
-  display: inline-block;
-  padding: 8px;
-}
-
-.time-study {
-  background: radial-gradient( circle 975px at 2.6% 48.3%,  rgba(0,8,120,1) 0%, rgba(95,184,224,1) 99.7% );
-  display: inline-block;
-  padding: 8px;
-}
-
-
 .desc {
   position: relative;
   margin: 1em 0 0 0;
@@ -934,7 +939,14 @@ header h1{
 }
 
 
-.direction-l .desc,
+.direction-l .desc {
+	position: relative;
+	margin: 1em 1em 0 1em;
+	padding: 1em;
+	z-index: 15;
+	text-align: left;
+}
+
 .direction-r .desc {
   position: relative;
   margin: 1em 1em 0 1em;
@@ -1102,7 +1114,7 @@ header h1{
 }
 
 .btn_color {
-    background: linear-gradient(90deg, #6091cc, #ef8ebf);
+    background: linear-gradient(to bottom right, #0100EC, #FB36F4);;
     border: none;
     color: white;
     padding: 1rem 1rem;
@@ -1191,7 +1203,7 @@ header h1{
 
 #certificates {
 	padding: 95px 0 50px;
-	background: #f2f2f2;
+	background: #E5E5E5;
 }
 
 .svg {
