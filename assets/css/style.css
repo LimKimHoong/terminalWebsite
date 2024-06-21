@@ -585,7 +585,7 @@ body {
 
 #about {
 	padding: 90px 0 75px;
-	background: #E5E5E5;
+	background: linear-gradient( 109.6deg,  rgb(186, 78, 190) 11.2%, rgb(64, 9, 190) 96.7% )
 }
 
 #about h2 {
@@ -596,6 +596,7 @@ body {
 	max-width: 100%;
 	width: 41em;
 	margin-bottom: -10px;
+	color: #FFF
 }
 
 .description p {
@@ -666,18 +667,28 @@ body {
 	}
 }
 
+.animate__animated {
+	--animate-duration: 2s;
+	animation-iteration-count: infinite;
+  }
 
 /* 07. SKILLS
 =================================================*/
 
 #skills {
 	padding: 90px 0 50px;
-	background: #E5E5E5;
+	color: #FFF;
+	background: linear-gradient( 109.6deg,  rgb(186, 78, 190) 11.2%, rgb(64, 9, 190) 96.7% );
 }
 
 #skills h2 {
 	margin-bottom: 50px;
 }
+
+#skills p {
+	color: #FFF;
+}
+
 
 .skills-right {
 	float: right;
@@ -717,7 +728,7 @@ body {
 }
 
 .color-heading {
-	color: #131313 !important;
+	color: #fff;
 }
 
 /* 08. EXPERIENCE
@@ -1114,7 +1125,7 @@ header h1{
 }
 
 .btn_color {
-    background: linear-gradient(to bottom right, #0100EC, #FB36F4);;
+    background: linear-gradient(160deg, #0093E9 0%, #80D0C7 100%);
     border: none;
     color: white;
     padding: 1rem 1rem;
@@ -1203,7 +1214,15 @@ header h1{
 
 #certificates {
 	padding: 95px 0 50px;
-	background: #E5E5E5;
+	background: linear-gradient( 109.6deg,  rgb(186, 78, 190) 11.2%, rgb(64, 9, 190) 96.7% )
+}
+
+#certificates h2 {
+	color: #fff;
+}
+
+#certificates p {
+	color : #fff
 }
 
 .svg {
@@ -1233,12 +1252,12 @@ header h1{
 
 #certificate .grid{
 	width: 50%;
-	
 }
 
 #certificates .row{
 	padding-top: 60px;
 	padding-bottom: 65px;
+	color : #fff
 }
 
 /* The grid: Four equal columns that floats next to each other */
@@ -1259,18 +1278,17 @@ header h1{
   }
   
 
-
-
 /* 13. CONTACT
 =================================================*/
 
 #contact {
 	padding: 65px 0 65px;
-	background: #f2f2f2;
+	background: linear-gradient( 109.6deg,  rgb(186, 78, 190) 11.2%, rgb(64, 9, 190) 96.7% )
 }
 
 #contact h2 {
 	margin-bottom: 45px;
+	color : #fff
 }
 
 #contact .address-icons p {
@@ -1283,10 +1301,11 @@ header h1{
 }
 
 #contact i.fa {
-	color: #131313;
+	color: #fff;
 	font-size: 2em;
 	line-height: 45px;
 	margin-bottom: 10px;
+
 }
 
 #contact .text-danger {
@@ -1388,7 +1407,6 @@ fieldset {
 	border: none;
 	margin-top: 10px;
 }
-
 
 /* 15. FOOTER
 =================================================*/
