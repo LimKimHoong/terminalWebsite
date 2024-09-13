@@ -48,13 +48,18 @@ body {
 
 @import url(https://fonts.googleapis.com/css?family=Anonymous+Pro);
 
-.line-1{
+.line-1 {
     position: relative;
     top: 50%;  
     width: 24em;
     margin: 0 auto;
     border-right: 2px solid rgba(255,255,255,.75);
-		color: rgba(255,255,255,1);
+    
+    /* Set up gradient for text */
+    background: linear-gradient(to right, #0083f9, #E93C97, #EF4A05);
+    -webkit-background-clip: text;
+    color: transparent; /* Hide solid color */
+    
     font-size: 230%;
     text-align: center;
     white-space: nowrap;
@@ -62,11 +67,13 @@ body {
     transform: translateY(-50%);    
 }
 
+
 /* Animation */
 .anim-typewriter{
-  animation: typewriter 4s steps(44) 1s 1 normal both,
-             blinkTextCursor 500ms steps(44) infinite normal;
+	animation: typewriter 5s steps(44) 1s infinite normal both,
+			   blinkTextCursor 500ms steps(44) infinite normal;
 }
+
 @keyframes typewriter{
   from{width: 0;}
   to{width: 14em;}
@@ -397,6 +404,17 @@ body {
 	font-size: 1.2em;
 }
 
+.navbar-collapse ul {
+    display: flex;
+    flex-wrap: nowrap; /* Prevents items from wrapping to a new line */
+    justify-content: space-around; /* Adds even spacing between items */
+}
+
+.navbar-collapse li {
+    padding: 0 15px; /* Adjusts spacing between each item */
+}
+
+
 .logo {
 	padding-top: 28px;
 	-webkit-transition: all 0.3s ease-out;
@@ -404,7 +422,7 @@ body {
 }
 
 .logo a {
-	color: #fff;
+	color:  #D3D3D3;
 	font-size: 1.5em;
 	font-weight: 600;
 	letter-spacing: 2px;
@@ -413,35 +431,39 @@ body {
 	text-transform: uppercase;
 }
 
-.navigation-menu .navbar-nav li a {
-	color: rgba(255, 255, 255, 0.71);
+.col-sm-9 {
+    width: 75%; /* Already set, but make sure it's not smaller */
+    max-width: 100%;
+}
+
+.navbar-nav {
+    display: inline-block;
+    width: 100%; /* Takes the full available width */
+    text-align: center; /* Centers the items */
+}
+
+/* Base styles */
+.navbar-nav li a {
+    padding: 30px 13px;
 	font-size: 0.9em;
 	font-weight: 600;
 	letter-spacing: 1px;
 	line-height: 18.15px;
-	padding: 30px 13px;
+    border-radius: 5px;
 	-webkit-transition: .3s;
-	transition: .3s;
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out, transform 0.3s ease; 
 }
 
-.navigation-menu .navbar-nav .active {
-	color: #fff;
-}
-
-.navigation-menu .navbar-nav li a:hover {
-	color: #fff;
-	background: none;
-	-webkit-transition: all 0.3s ease-out;
-	transition: all 0.3s ease-out;
+/* Hover effect: change background, text color, and scale */
+.navbar-nav li a:hover {
+    color: linear-gradient(red, yellow);
+    background: none;  /* White text */
+    transform: scale(1.05);  /* Slight scale-up effect */
+    -webkit-transition: all 0.3s ease-out;
+    transition: all 0.3s ease-out;
 }
 
 .nav li a:focus,
-.nav li a:hover {
-	color: rgba(255, 255, 255, 0.8);
-	background: none;
-	-webkit-transition: all 0.3s ease-out;
-	transition: all 0.3s ease-out;
-}
 
 .navbar {
 	margin: 0;
@@ -481,6 +503,18 @@ body {
 	color: #48b14d !important;
 	background-color: transparent;
 }
+
+@media (max-width: 768px) {
+    .navbar-collapse ul {
+        flex-wrap: wrap; /* Allow items to wrap on smaller screens */
+    }
+
+    .navbar-nav li {
+        flex: 1 1 100%; /* Each item takes full width on small screens */
+        text-align: center;
+    }
+}
+
 
 /* 05. HOME
 =================================================*/
@@ -1125,7 +1159,7 @@ header h1{
 }
 
 .btn_color {
-    background: linear-gradient(160deg, #0093E9 0%, #80D0C7 100%);
+    background: linear-gradient(180deg, #29190C, #9E7859);
     border: none;
     color: white;
     padding: 1rem 1rem;
@@ -1136,7 +1170,7 @@ header h1{
 }
 
 .btn_color:hover {
-    background-color: #4f7ebf;
+    background: linear-gradient(90deg, #1B9ABA, #2993EB, #0151F0);
     transform: scale(1.05);
 }
 
