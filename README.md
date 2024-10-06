@@ -1,19 +1,20 @@
-Welcome to my personal terminal website! This website is built with simple HTML, CSS, and JavaScript, and it is intended to introduce myself briefly.
-<br/>
+## Responsive Portfolio Website ✨
 
-## Getting Started
-Once you land on the page, you will see a terminal interface where you can interact with the website.
+Responsive Portfolio Website Using HTML, CSS and JavaScript, with a beautiful user interface. 
+Website contains: 
+- Header 
+- Home
+- About
+- Skills
+- Qualification
+- Services
+- Portfolio
+- Project in mind
+- Testimonial
+- Contact
+- Footer 
 
-## Features
-- Simple terminal interface
-- Interactive commands
-- Easy to navigate
+If u liked my website and the code was useful to you, <br>
+feel free to leave a star (much appreciated) fork it and customize as you like! :)
 
-## Contributions
-If you find any issues or have suggestions for improving this website, feel free to open an issue or create a pull request on the [GitHub repository](https://github.com/limkimhoong/terminalWebsite.git).
-
-## Author
-This website was created by Lim Kim Hoong. 
-
-## License
-This project is licensed under the [MIT License](https://opensource.org/license/mit/) - see the LICENSE file for details.
+- Inspired design by Bedimcode-Alexa design 🙌
