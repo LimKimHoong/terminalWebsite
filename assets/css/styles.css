@@ -7,7 +7,14 @@
 
   /*========== Colors ==========*/
   /* Change favorite color */
-  --hue-color: 240; /*Purple 250 - Green 142 - Blue 230 - Pink 340*/
+  --hue-color: 215; /*Purple 250 - Green 142 - Blue 230 - Pink 340*/
+  --shiny-color: linear-gradient(
+        -75deg,
+        rgba(0, 0, 0, 0.55) 0%,
+        rgba(0, 0, 0, 0.55) 35%,
+        hsl(var(--primary)) 50%,
+        rgba(0, 0, 0, 0.55) 65%,
+        rgba(0, 0, 0, 0.55) 100%    );
 
   /* HSL color mode */
   --first-color: hsl(var(--hue-color), 69%, 61%);
@@ -22,6 +29,20 @@
   --container-color: #fff;
   --scroll-bar-color: hsl(var(--hue-color), 12%, 90%);
   --scroll-thumb-color: hsl(var(--hue-color), 12%, 80%);
+
+  /* ShinyText color mode */
+  --shiny-first-color: hsl(var(--shiny-color), 69%, 61%);
+  --shiny-second-color: hsl(var(--shiny-color), 69%, 61%);
+  --shiny-alt-color: hsl(var(--shiny-color), 57%, 53%);
+  --shiny-lighter-color: hsl(var(--shiny-color), 92%, 85%);
+  --shiny-title-color: hsl(var(--shiny-color), 8%, 15%);
+  --shiny-text-color: hsl(var(--shiny-color), 8%, 45%);
+  --shiny-text-color-light: hsl(var(--shiny-color), 8%, 65%);
+  --shiny-input-color: hsl(var(--shiny-color), 70%, 96%);
+  --shiny-body-color: hsl(var(--shiny-color), 60%, 99%);
+  --shiny-container-color: #fff;
+  --shiny-scroll-bar-color: hsl(var(--shiny-color), 12%, 90%);
+  --shiny-scroll-thumb-color: hsl(var(--shiny-color), 12%, 80%);
 
   /*========== Font and typography ==========*/
   --body-font: "Poppins", sans-serif;
@@ -233,7 +254,7 @@ img {
     padding: 0.7rem 1.1rem;
     border-radius: 999px;
     text-decoration: none;
-    color: #000000;
+    color: var(--text-color-light);
     font-weight: 800;
     font-size: 0.95rem;
     line-height: 1;
@@ -272,7 +293,7 @@ img {
         0 8px 20px rgba(0, 0, 0, 0.18),
         0 0 12px rgba(0, 122, 255, 0.15), /* subtle iOS blue glow */
         inset 0 1px 1px rgba(255, 255, 255, 0.2);
-    color: #000;  /* keep neutral */
+    color: var(--title-color);
 }
 
 .glass-btn:active {
@@ -284,7 +305,7 @@ img {
 
 /* Active/current section */
 .active-link {
-    background: rgba(255, 255, 255, 0.14);
+    background: rgba(164, 163, 163, 0.14);
     border: 1px solid rgba(0, 122, 255, 0.4);
     box-shadow: 
         0 6px 16px rgba(0,0,0,0.18),
@@ -311,7 +332,7 @@ img {
 .nav__toggle {
     font-size: 1.2rem;
     cursor: pointer;
-    color: #fff;
+    color: var(--text-color);
     transition: 0.3s;
 }
 
@@ -368,7 +389,7 @@ img {
 
 /* Active link */
 .active-link {
-  color: var(--first-color);
+  color: var(--title-color);
 }
 
 /* Change background header */
@@ -508,17 +529,17 @@ body.dark-theme {
     /* animated shine on text */
     background: linear-gradient(
         -75deg,
-        rgba(0, 0, 0, 0.55) 0%,
-        rgba(0, 0, 0, 0.55) 35%,
-        hsl(var(--primary)) 50%,
-        rgba(0, 0, 0, 0.55) 65%,
-        rgba(0, 0, 0, 0.55) 100%
+        hsl(var(--primary)) 0%,
+        hsl(var(--primary)) 35%,
+        white 50%,
+        hsl(var(--primary)) 65%,
+        hsl(var(--primary)) 100%
     );
     background-size: 250% 100%;
     background-position: 100% 0;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    animation: textShine 3s ease-in-out infinite;
+    animation: textShine 5s ease-in-out infinite;
 }
 
 /* Dark mode text shine */
@@ -556,7 +577,7 @@ body.dark-theme .shiny-btn__text {
     );
     background-size: 250% 100%;
     background-position: 100% 0;
-    animation: borderShine 3s ease-in-out infinite;
+    animation: borderShine 5s ease-in-out infinite;
 
     /* show only border */
     -webkit-mask:
@@ -581,12 +602,12 @@ body.dark-theme .shiny-btn__text {
         transparent 65%
     );
     transform: translateX(120%) rotate(8deg);
-    animation: sweepShine 3s ease-in-out infinite;
+    animation: sweepShine 5s ease-in-out infinite;
 }
 
 /* Hover slightly brighten */
 .shiny-btn:hover::before {
-    animation-duration: 2.2s;
+    animation-duration: 5s;
 }
 
 /* Animations */
@@ -1183,7 +1204,7 @@ body.dark-theme .shiny-btn__text {
 
 .project__title {
   font-size: var(--h2-font-size);
-  margin-bottom: var(--mb-0-75);
+  margin-bottom: var(--mb-1-5);
 }
 
 .project__description {
@@ -1299,7 +1320,7 @@ body.dark-theme .shiny-btn__text {
 
 .footer__bg {
   background-color: var(--first-color-second);
-  padding: 1rem 0 3rem;
+  padding: 0.5rem 0.5rem 0.5rem 0.5rem;
 }
 
 .footer__title {
@@ -1334,7 +1355,6 @@ body.dark-theme .shiny-btn__text {
   font-size: var(--smaller-font-size);
   text-align: center;
   color: var(--text-color-light);
-  margin-top: var(--mb-3);
 }
 
 .footer__title,
@@ -1626,7 +1646,7 @@ body.dark-theme .shiny-btn__text {
       grid-template-columns: repeat(3, 1fr);
     }
     .footer__bg {
-      padding: 3rem 0 3.5rem;
+      padding: 0.5rem 0.5rem 0.5rem 0.5rem;
     }
 
     .footer__links {
@@ -1637,7 +1657,7 @@ body.dark-theme .shiny-btn__text {
       justify-self: flex-end;
     }
     .footer__copy {
-      margin-top: 4.5rem;
+        text-align: center;
     }
   }
 }
