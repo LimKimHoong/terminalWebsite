@@ -126,21 +126,21 @@
                         </div>
 
                         <div class="home__img">
-                            <svg class="home__blob" viewBox="0 0 200 187" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                                <mask id="mask0" mask-type="alpha">
-                                    <path d="M190.312 36.4879C206.582 62.1187 201.309 102.826 182.328 134.186C163.346 165.547 
-                                    130.807 187.559 100.226 186.353C69.6454 185.297 41.0228 161.023 21.7403 129.362C2.45775 
-                                    97.8511 -7.48481 59.1033 6.67581 34.5279C20.9871 10.1032 59.7028 -0.149132 97.9666 
-                                    0.00163737C136.23 0.303176 174.193 10.857 190.312 36.4879Z"/>
-                                </mask>
-                                <g mask="url(#mask0)">
-                                    <path d="M190.312 36.4879C206.582 62.1187 201.309 102.826 182.328 134.186C163.346 
-                                    165.547 130.807 187.559 100.226 186.353C69.6454 185.297 41.0228 161.023 21.7403 
-                                    129.362C2.45775 97.8511 -7.48481 59.1033 6.67581 34.5279C20.9871 10.1032 59.7028 
-                                    -0.149132 97.9666 0.00163737C136.23 0.303176 174.193 10.857 190.312 36.4879Z"/>
-                                    <image class="home__blob-img" x="" xlink:href="assets/img/icon/me_3.jpeg"/>
-                                </g>
-                            </svg>
+                            <div class="portrait__glow"></div>
+
+                            <span class="portrait__orbit portrait__orbit-1"></span>
+                            <span class="portrait__orbit portrait__orbit-2"></span>
+                            <span class="portrait__orbit portrait__orbit-3"></span>
+
+                            <div class="portrait__frame">
+                                <img 
+                                    src="assets/img/icon/me_4.jpg" 
+                                    alt="Lim Kim Hoong profile photo" 
+                                    class="portrait__img"
+                                >
+
+                                <span class="portrait__shine"></span>
+                            </div>
                         </div>
                         
                         <div class="home__data">
@@ -149,9 +149,9 @@
                             <div data-aos="fade-zoom-in" data-aos-easing="ease-in-back" data-aos-delay="300" data-aos-offset="0">
                                 <br>
                                 <h3 class="home_subtitle" id="text-rotator">
-                                    <span class="rotating-text">AI Engineer</span>
-                                    <span class="rotating-text">Data Scientist</span>
-                                    <span class="rotating-text">Senior Data Analyst</span>
+                                    <span class="rotating-text">👨🏻‍💻 AI Engineer</span>
+                                    <span class="rotating-text">👨🏻‍💻 Data Scientist</span>
+                                    <span class="rotating-text">👨🏻‍💻 Senior Data Analyst</span>
                                 </h3>
                             </div>
                             <p class="home__description">High-level experience in AI and data analysis, specializing in using machine learning and advanced analytics to drive strategic insights.</p>                            
@@ -169,8 +169,8 @@
                 <h2 class="section__title">About Me</h2>
                 <span class="section__subtitle">My introduction</span>
                 <div class="about__container container grid">
-                    <div class="animate__animated animate__hinge">
-                        <img src="assets/img/icon/header-img.svg" alt="Header Img"/>
+                    <div class="header__gif-wrapper">
+                        <img src="./assets/img/icon/wallpaper1.gif" alt="Header Img" class="header__gif">
                     </div>
                     <div class="about__data">
                         <p class="about__description">
@@ -185,13 +185,15 @@
                                 <span class="about__info-title" data-target="6">0</span>
                                 <span class="about__info-name">Years <br> experience</span>
                             </div>
+
                             <div class="about__info-item">
                                 <span class="about__info-title" data-target="5">0</span>
                                 <span class="about__info-name">Completed <br> certifications</span>
                             </div>
+
                             <div class="about__info-item">
                                 <span class="about__info-title" data-target="4">0</span>
-                                <span class="about__info-name">companies<br>worked</span>
+                                <span class="about__info-name">Companies <br> worked</span>
                             </div>
                         </div>
                         <a download="" href="assets/resume/Resume_LimKimHoong.pdf" class="shiny-btn" id="shinyBtn">
@@ -710,6 +712,7 @@
                                 <span class="shiny-btn__border"></span>
                             </a>
                     </div>
+                    <br>
                     <!-- <img src="assets/img/project.png" alt="" class="project__img"> -->
                 </div>
             </div>
@@ -722,26 +725,34 @@
         
             <div class="contact__container container grid" style="display: flex; justify-content: center; align-items: center; text-align: center;">
                 <div>
-                    <div class="contact__information">
-                        <i class="uil uil-linkedin contact__icon"></i>
-                        <div>
-                            <h3 class="contact__title">Lim Kim Hoong</h3>
-                        </div>
-                    </div>
+                    <a href="https://www.linkedin.com/in/lim-kim-hoong-0757591ba/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="contact__information linkedin-link">
+                            <i class="uil uil-linkedin contact__icon"></i>
+                            <div>
+                                <h3 class="contact__title">Lim Kim Hoong</h3>
+                            </div>
+                    </a>
         
-                    <div class="contact__information">
-                        <i class="uil uil-envelope contact__icon"></i>
-                        <div>
-                            <h3 class="contact__title">kimhoong0324@gmail.com</h3>
-                        </div>
-                    </div>
-        
-                    <div class="contact__information">
-                        <i class="uil uil-map-marker contact__icon"></i>
-                        <div>
-                            <h3 class="contact__title">Kuala Lumpur, Malaysia</h3>
-                        </div>
-                    </div>
+                    <a href="mailto:kimhoong0324@gmail.com?subject=Job%20Opportunity"
+                        class="contact__information linkedin-link">
+                            <i class="uil uil-envelope contact__icon"></i>
+                            <div>
+                                <h3 class="contact__title">kimhoong0324@gmail.com</h3>
+                            </div>
+                    </a>
+                    
+                    <a href="https://www.google.com/maps/search/?api=1&query=Kuala+Lumpur+Malaysia"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="contact__information linkedin-link">
+                            <i class="uil uil-map-marker contact__icon"></i>
+                            <div>
+                                <h3 class="contact__title">Kuala Lumpur, Malaysia</h3>
+                            </div>
+
+                    </a>
                 </div>
             </div>
         </section>
@@ -757,6 +768,10 @@
     <!--==================== SCROLL TOP ====================-->
     <a href="#" class="scrollup" id="scroll-up">
         <i class="uil uil-arrow-up scrollup__icon"></i>
+    </a>
+
+    <a href="#" class="scrolldown" id="scroll-down">
+        <i class="uil uil-arrow-down scrolldown__icon"></i>
     </a>
     
     <!--==================== SWIPER JS ====================-->

@@ -190,6 +190,34 @@ function scrollUp() {
 }
 window.addEventListener("scroll", scrollUp);
 
+/*==================== SHOW SCROLL DOWN ====================*/
+function scrollDown() {
+  const scrollDown = document.getElementById("scroll-down");
+  // When the scroll is higher than 560 viewport height, add the show-scroll class to the a tag with the scroll-top class
+  if (this.scrollY < 560) scrollDown.classList.add("show-scroll");
+  else scrollDown.classList.remove("show-scroll");
+}
+window.addEventListener("scroll", scrollDown);
+
+/*==================== MOVE PAGE ====================*/
+document.getElementById("scroll-up").addEventListener("click", function (e) {
+    e.preventDefault();
+
+    window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+    });
+});
+
+document.getElementById("scroll-down").addEventListener("click", function (e) {
+    e.preventDefault();
+
+    window.scrollTo({
+        top: document.documentElement.scrollHeight,
+        behavior: "smooth"
+    });
+});
+
 /*==================== DARK LIGHT THEME ====================*/
 
 const themeButton = document.getElementById("theme-button");
