@@ -1,0 +1,9 @@
+{
+  "name": "lim-kim-hoong-portfolio",
+  "version": "1.0.0",
+  "private": true,
+  "description": "GitHub-inspired personal portfolio for Lim Kim Hoong",
+  "dependencies": {
+    "@primer/css": "22.3.0"
+  }
+}

@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kim Hoong CV </title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;900&display=swap" rel="stylesheet">
+<link rel="icon" href="/static/image/icon/cv-favicon.png" type="image/png">
+<link rel="apple-touch-icon" href="/static/image/icon/cv-favicon.png">
+<style>
+  :root {
+    --bg: #0d0d0d;
+    --surface: #151515;
+    --surface2: #1e1e1e;
+    --border: #2a2a2a;
+    --text: #f0f0f0;
+    --muted: #888;
+    --accent: #6c63ff;
+    --accent2: #00d4aa;
+    --accent3: #ff6b6b;
+    --yellow: #ffd166;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: 'Inter', sans-serif;
+    font-size: 15px;
+    line-height: 1.6;
+    overflow-x: hidden;
+  }
+
+  /* NAV */
+  nav {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 1rem 2.5rem;
+    background: rgba(13,13,13,0.85);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--border);
+  }
+  .nav-logo { font-weight: 700; font-size: 1.1rem; letter-spacing: -0.5px; }
+  .nav-logo span { color: var(--accent); }
+  .nav-links { display: flex; gap: 2rem; list-style: none; }
+  .nav-links a { color: var(--muted); text-decoration: none; font-size: 0.875rem; font-weight: 500; transition: color 0.2s; }
+  .nav-links a:hover { color: var(--text); }
+
+  /* HERO */
+  .hero {
+    min-height: 100vh; display: flex; align-items: center;
+    padding: 6rem 2.5rem 4rem;
+    position: relative; overflow: hidden;
+  }
+  .hero-bg {
+    position: absolute; inset: 0; pointer-events: none;
+    background: radial-gradient(ellipse 60% 50% at 80% 50%, rgba(108,99,255,0.12) 0%, transparent 70%);
+  }
+  .hero-content { max-width: 900px; position: relative; }
+  .hero-tag {
+    display: inline-flex; align-items: center; gap: 0.5rem;
+    background: rgba(108,99,255,0.15); border: 1px solid rgba(108,99,255,0.3);
+    border-radius: 100px; padding: 0.3rem 0.9rem;
+    font-size: 0.8rem; font-weight: 600; color: #a89cff;
+    margin-bottom: 1.5rem;
+    opacity: 0; animation: fadeUp 0.6s 0.1s forwards;
+  }
+  .hero-tag span { width: 6px; height: 6px; border-radius: 50%; background: var(--accent2); display: inline-block; animation: pulse 2s infinite; }
+  .hero h1 {
+    font-size: clamp(2.8rem, 6vw, 5rem);
+    font-weight: 900; line-height: 1.05;
+    letter-spacing: -2px;
+    opacity: 0; animation: fadeUp 0.6s 0.2s forwards;
+  }
+  .hero h1 .name-accent { color: var(--accent); }
+  .hero-sub {
+    font-size: 1.15rem; color: var(--muted); margin: 1.25rem 0 2rem;
+    max-width: 560px;
+    opacity: 0; animation: fadeUp 0.6s 0.35s forwards;
+  }
+  .hero-cta {
+    display: flex; gap: 1rem; flex-wrap: wrap;
+    opacity: 0; animation: fadeUp 0.6s 0.45s forwards;
+  }
+  .btn-primary {
+    padding: 0.75rem 1.75rem; border-radius: 8px;
+    background: var(--accent); color: #fff; border: none;
+    font-weight: 600; font-size: 0.9rem; cursor: pointer;
+    text-decoration: none; transition: transform 0.2s, opacity 0.2s;
+  }
+  .btn-primary:hover { opacity: 0.85; transform: translateY(-1px); }
+  .btn-ghost {
+    padding: 0.75rem 1.75rem; border-radius: 8px;
+    background: transparent; color: var(--text);
+    border: 1px solid var(--border);
+    font-weight: 600; font-size: 0.9rem; cursor: pointer;
+    text-decoration: none; transition: border-color 0.2s, transform 0.2s;
+  }
+  .btn-ghost:hover { border-color: var(--accent); transform: translateY(-1px); }
+
+  .btn-download {
+  padding: 0.75rem 1.75rem; border-radius: 8px;
+  background: transparent; color: var(--accent2);
+  border: 1px solid rgba(0,212,170,0.35);
+  font-weight: 600; font-size: 0.9rem; cursor: pointer;
+  text-decoration: none; transition: border-color 0.2s, background 0.2s, transform 0.2s;
+  }
+
+  .btn-download:hover {
+    border-color: var(--accent2);
+    background: rgba(0,212,170,0.08);
+    transform: translateY(-1px);
+  }
+
+  /* STATS ROW */
+  .stats {
+    display: flex; gap: 2rem; margin-top: 3.5rem;
+    opacity: 0; animation: fadeUp 0.6s 0.55s forwards;
+    flex-wrap: wrap;
+  }
+  .stat { border-left: 2px solid var(--accent); padding-left: 1rem; }
+  .stat-num { font-size: 1.6rem; font-weight: 800; color: var(--text); }
+  .stat-label { font-size: 0.78rem; color: var(--muted); text-transform: uppercase; letter-spacing: 0.05em; }
+
+  /* SECTIONS */
+  section { padding: 5rem 2.5rem; max-width: 1100px; margin: 0 auto; }
+  .section-label {
+    font-size: 0.75rem; font-weight: 700; letter-spacing: 0.12em;
+    text-transform: uppercase; color: var(--accent); margin-bottom: 0.5rem;
+  }
+  .section-title { font-size: 2rem; font-weight: 800; letter-spacing: -0.5px; margin-bottom: 0.75rem; }
+  .section-desc { color: var(--muted); max-width: 520px; margin-bottom: 3rem; }
+
+  /* EXPERIENCE */
+  .timeline { position: relative; padding-left: 1.5rem; }
+  .timeline::before {
+    content: ''; position: absolute; left: 0; top: 8px; bottom: 0;
+    width: 1px; background: var(--border);
+  }
+  .exp-item {
+    position: relative; padding-bottom: 2.5rem;
+    opacity: 0; transform: translateY(20px);
+    transition: opacity 0.5s, transform 0.5s;
+  }
+  .exp-item.visible { opacity: 1; transform: none; }
+  .exp-item::before {
+    content: ''; position: absolute; left: -1.875rem; top: 8px;
+    width: 10px; height: 10px; border-radius: 50%;
+    background: var(--accent); border: 2px solid var(--bg);
+    box-shadow: 0 0 0 3px rgba(108,99,255,0.2);
+  }
+  .exp-header { display: flex; align-items: flex-start; justify-content: space-between; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 0.25rem; }
+  .exp-company { font-weight: 700; font-size: 1rem; }
+  .exp-date { font-size: 0.8rem; color: var(--muted); background: var(--surface2); padding: 2px 10px; border-radius: 100px; border: 1px solid var(--border); }
+  .exp-role { font-size: 0.85rem; color: var(--accent2); font-weight: 600; margin-bottom: 0.75rem; }
+  .exp-bullets { list-style: none; }
+  .exp-bullets li {
+    font-size: 0.875rem; color: var(--muted); padding: 0.3rem 0;
+    padding-left: 1.1rem; position: relative;
+  }
+  .exp-bullets li::before {
+    content: '›'; position: absolute; left: 0; color: var(--accent); font-weight: 700;
+  }
+
+  /* EDUCATION */
+  .edu-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1rem; }
+  .edu-card {
+    background: var(--surface); border: 1px solid var(--border);
+    border-radius: 12px; padding: 1.5rem;
+  }
+  .edu-year { font-size: 0.75rem; color: var(--accent); font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 0.5rem; }
+  .edu-degree { font-weight: 700; margin-bottom: 0.25rem; }
+  .edu-school { color: var(--muted); font-size: 0.875rem; }
+  .edu-badge {
+    display: inline-block; margin-top: 0.75rem;
+    background: rgba(0,212,170,0.1); border: 1px solid rgba(0,212,170,0.3);
+    color: var(--accent2); font-size: 0.75rem; font-weight: 600;
+    padding: 3px 10px; border-radius: 100px;
+  }
+
+  /* CONTACT */
+  .contact-row { display: flex; gap: 1rem; flex-wrap: wrap; }
+  .contact-link {
+    display: flex; align-items: center; justify-content: center;
+    width: 52px; height: 52px;
+    background: var(--surface); border: 1px solid var(--border);
+    border-radius: 12px;
+    text-decoration: none; color: var(--text);
+    transition: border-color 0.2s, transform 0.2s, background 0.2s;
+  }
+  .contact-link:hover { border-color: var(--accent); transform: translateY(-3px); background: var(--surface2); }
+  .contact-link svg { width: 22px; height: 22px; }
+
+  /* FOOTER */
+  footer {
+    text-align: center; padding: 3rem 2rem;
+    border-top: 1px solid var(--border);
+    color: var(--muted); font-size: 0.8rem;
+  }
+
+  /* ANIMATIONS */
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(24px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  @keyframes pulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.4; }
+  }
+
+  /* SCROLLBAR */
+  ::-webkit-scrollbar { width: 6px; }
+  ::-webkit-scrollbar-track { background: var(--bg); }
+  ::-webkit-scrollbar-thumb { background: var(--border); border-radius: 3px; }
+
+  @media (max-width: 640px) {
+    nav { padding: 1rem 1.25rem; }
+    .nav-links { display: none; }
+    section { padding: 3.5rem 1.25rem; }
+    .hero { padding: 5rem 1.25rem 3rem; }
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-logo">Kim<span>.</span></div>
+  <ul class="nav-links">
+    <li><a href="#experience">Experience</a></li>
+    <li><a href="#education">Education</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<div class="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-content">
+    <div class="hero-tag"><span></span> Open to opportunities · Kuala Lumpur, MY</div>
+    <h1>Kim Hoong<br><span class="name-accent">Lim.</span></h1>
+    <p class="hero-sub">Data Enthusiast with a Master of Data Science (Distinction). Building dashboards, predictive models and insights that drive real decisions.</p>
+    <div class="hero-cta">
+      <a href="#experience" class="btn-primary">View Experience</a>
+      <a href="mailto:kimhoong0324@gmail.com" class="btn-ghost">Get in Touch</a>
+      <a href="assets/resume/Resume_LimKimHoong.pdf" download class="btn-download">Download CV ↓</a>
+    </div>
+    <div class="stats">
+      <div class="stat"><div class="stat-num">5+</div><div class="stat-label">Years Experience</div></div>
+      <div class="stat"><div class="stat-num">5+</div><div class="stat-label">Portfolio Projects</div></div>
+      <div class="stat"><div class="stat-num">5+</div><div class="stat-label">Clients Served</div></div>
+      <div class="stat"><div class="stat-num">Distinction</div><div class="stat-label">Master's Degree</div></div>
+    </div>
+  </div>
+</div>
+
+<!-- EXPERIENCE -->
+<section id="experience">
+  <div class="section-label">Where I've worked</div>
+  <div class="section-title">Experience</div>
+  <p class="section-desc">Working experience across data analytics, modeling, and operational data management.</p>
+  <div class="timeline">
+
+    <div class="exp-item">
+      <div class="exp-header">
+        <div class="exp-company">Bursa Malaysia Berhad</div>
+        <div class="exp-date">Jun. 2026 – Present</div>
+      </div>
+      <div class="exp-role">Manager, Client Analytics and Strategy</div>
+      <ul class="exp-bullets">
+        <li>Lead data-driven analytics frameworks to understand investor trading behavior and product aoption across equities, derivatices, gold and bonds.</li>
+        <li>Develop predictive and machine learning models, including time series and segmentation to forecast trading activity and identify cross-sell opportunities with retail investors, institutional investors and brokers.</li>
+        <li>Build dashboards and reporting tools to monitor market share shifts, client lifecycle value and commercial performance.</li>
+        <li>Present analytical insights to senior leadership to inform marketing strategy, stakeholder management and divisional decision-making.</li>
+      </ul>
+    </div>
+
+    <div class="exp-item">
+      <div class="exp-header">
+        <div class="exp-company">Azendian Solutions Pte. Ltd.</div>
+        <div class="exp-date">Nov. 2024 - May 2026</div>
+      </div>
+      <div class="exp-role">Data Scientist</div>
+      <ul class="exp-bullets">
+        <li>Oversaw end-to-end analytics projects, including data preprocessing, model deployment and monitoring.</li>
+        <li>Improved data collection methods and collaborared with cross-functional teams throughout the product lifecycle to ensure optimal system performance.</li>
+        <li>Sole contributor to, and support projects within the scope of Machine Learning.</li>
+      </ul>
+    </div>
+
+    <div class="exp-item">
+      <div class="exp-header">
+        <div class="exp-company">Userdata Sdn. Bhd.</div>
+        <div class="exp-date">May 2024 - Nov. 2024</div>
+      </div>
+      <div class="exp-role">AI Engineer</div>
+      <ul class="exp-bullets">
+        <li>Delivered expert Python coding support for an internal chatbot product, ensuring precise implementation of advanced data science methodologies.</li>
+        <li>Designed and deployed machine learning and NLP models using Python, while continuously integreting cutting-edge open-source LLM models to enhance accuracy and processing speed.</li>
+      </ul>
+    </div>
+
+    <div class="exp-item">
+      <div class="exp-header">
+        <div class="exp-company">OKX</div>
+        <div class="exp-date">Sep. 2023 - Apr. 2024</div>
+      </div>
+      <div class="exp-role">Senior Data Analyst</div>
+      <ul class="exp-bullets">
+        <li>Performed data cleaning, transformation, data quality check and EDA in Python and VBA.</li>
+        <li>Enhanced the efficiency of process flow by 50% by creating an automated workflow for web scraping, utilizing Python and Selenium.</li>
+      </ul>
+    </div>
+
+    <div class="exp-item">
+      <div class="exp-header">
+        <div class="exp-company">Bursa Malaysia Berhad</div>
+        <div class="exp-date">Dec. 2020 - Aug. 2023</div>
+      </div>
+      <div class="exp-role">Reference Data Management Analyst</div>
+      <ul class="exp-bullets">
+        <li>Established legacy VBA procedures, constructing innovative data infrastructures that elevated data processing speeds and overall process efficiency by 50%.</li>
+        <li>Crafted and refined over 3 Power BI interactive dashboards to track crucial quality managemenr metrics, achieving an 60% improvement in real-time data processing and monitor daily.</li>
+        <li>Acheived a time reduction of 70% in data verification for Bursa Trade Securities 2 (BTS2) Tech. Refresh project by utilizing Python.</li>
+      </ul>
+    </div>
+
+  </div>
+</section>
+
+<!-- EDUCATION -->
+<section id="education" style="padding-top: 0;">
+  <div class="section-label">Academic background</div>
+  <div class="section-title">Education</div>
+  <div class="edu-grid">
+    <div class="edu-card">
+      <div class="edu-year">Mar. 2022 – Jul 2023</div>
+      <div class="edu-degree">Master of  Data Science</div>
+      <div class="edu-school">University of Malaya</div>
+      <div class="edu-badge">Distinction</div>
+    </div>
+    <div class="edu-card">
+      <div class="edu-year">Mar. 2017 – Oct. 2020</div>
+      <div class="edu-degree">Bachelor's degree, Financial Mathematics</div>
+      <div class="edu-school">Universiti Tunku Abdul Rahman (UTAR)</div>
+      <div class="edu-badge">Distinction</div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" style="padding-top: 0;">
+  <div class="section-label">Let's talk</div>
+  <div class="section-title">Get in Touch</div>
+  <p class="section-desc" style="margin-bottom: 1.5rem;">Open to AI Engineer, and Data Scientists in Malaysia and remote.</p>
+  <div class="contact-row">
+    <a href="mailto:kimhoong0324@gmail.com" class="contact-link" title="Email">
+    <img src="assets\img\icon\email-icon.png" width="22" height="22" alt="Email">
+    </a>
+    <a href="https://www.linkedin.com/in/lim-kim-hoong-0757591ba/" class="contact-link" title="LinkedIn">
+    <img src="assets\img\icon\linkedin-icon.png" width="22" height="22" alt="LinkedIn">
+    </a>
+    <a href="https://github.com/LimKimHoong" class="contact-link" title="Github">
+    <img src="assets\img\icon\github-icon.png" width="22" height="22" alt="Github">
+    </a>
+    <a href="https://limkimhoong.github.io/terminalWebsite/" class="contact-link" title="Portfolio">
+    <img src="assets\img\icon\portfolio-icon.png" width="22" height="22" alt="Portfolio">
+    </a>
+  </div>
+</section>
+
+<footer>
+  Copyright © 2026 Lim Kim Hoong. All Right Reserved
+</footer>
+
+<script>
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) entry.target.classList.add('visible');
+    });
+  }, { threshold: 0.15 });
+  document.querySelectorAll('.exp-item').forEach(el => observer.observe(el));
+</script>
+</body>
+</html>
