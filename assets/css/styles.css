@@ -387,45 +387,53 @@ input {
   text-transform: uppercase;
 }
 
-.hero h1,
-.anim-typewriter {
+.hero__name {
+  display: flex;
+  align-items: baseline;
+  width: max-content;
+  max-width: 100%;
+  column-gap: .15em;
+}
+
+.hero__name-word {
   display: inline-block;
-  width: fit-content;
   background: var(--display-spectrum);
-  background-size: 200% 100%;
+  background-size: 220% 100%;
   background-clip: text;
   color: transparent;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
-.anim-typewriter {
-  width: 0;
-  overflow: hidden;
-  border-right: 3px solid var(--accent);
-  font-family: monospace;
-  white-space: nowrap;
-  animation:
-    typing 2s steps(13, end) infinite,
-    blink-caret 0.5s step-end infinite,
-    shimmer 10s linear infinite;
+.hero__name-word:first-child {
+  background-position: left center;
 }
 
-@keyframes typing {
-  from { width: 0; }
-  to { width: 13ch; }
+.hero__name-word:last-child {
+  background-position: right center;
 }
 
-@keyframes blink-caret {
-  0%,
-  100% { border-color: transparent; }
-
-  50% { border-color: var(--accent); }
+.js-enabled [data-reveal="hero-title"] .hero__name-word {
+  opacity: 0;
+  clip-path: inset(100% 0 0 0);
+  filter: blur(10px);
+  transform: translate3d(0, .42em, 0) scale(.985);
+  transition:
+    clip-path 860ms cubic-bezier(.16, 1, .3, 1),
+    filter 640ms cubic-bezier(.16, 1, .3, 1),
+    opacity 420ms ease-out,
+    transform 860ms cubic-bezier(.16, 1, .3, 1);
 }
 
-@keyframes shimmer {
-  from { background-position: 0% center; }
-  to { background-position: 100% center; }
+.js-enabled [data-reveal="hero-title"] .hero__name-word:last-child {
+  transition-delay: 90ms;
+}
+
+.js-enabled [data-reveal="hero-title"].is-visible .hero__name-word {
+  opacity: 1;
+  clip-path: inset(0 0 0 0);
+  filter: blur(0);
+  transform: translate3d(0, 0, 0) scale(1);
 }
 
 .about__heading h2 {
@@ -437,7 +445,6 @@ input {
 }
 
 .hero h1 {
-  background-image: var(--display-spectrum);
   font-size: clamp(4.8rem, 15.25vw, 14rem);
   font-weight: 850;
   letter-spacing: -.08em;
@@ -1762,7 +1769,8 @@ html[data-color-mode="dark"] .project-card:nth-child(4) .project-card__media img
 }
 
 .js-enabled [data-reveal="hero-title"] {
-  transform: translateY(42px);
+  transform: none;
+  transition-duration: 320ms;
 }
 
 .js-enabled [data-reveal="hero-portrait"] {
@@ -2443,6 +2451,14 @@ html[data-color-mode="dark"] .project-card:nth-child(4) .project-card__media img
   .js-enabled [data-reveal],
   .about__manifesto .reveal-word {
     opacity: 1;
+  }
+
+  .js-enabled [data-reveal="hero-title"] .hero__name-word,
+  .js-enabled [data-reveal="hero-title"].is-visible .hero__name-word {
+    opacity: 1;
+    clip-path: none;
+    filter: none;
+    transform: none;
   }
 }
 
