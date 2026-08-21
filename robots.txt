@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://limkimhoong.github.io/terminalWebsite/sitemap.xml
