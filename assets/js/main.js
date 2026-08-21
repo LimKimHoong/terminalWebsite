@@ -14,6 +14,7 @@ const terminalOutput = document.getElementById("terminal-output");
 const splitRevealElements = [...document.querySelectorAll("[data-split-reveal]")];
 const magnetElements = [...document.querySelectorAll("[data-magnet]")];
 const projectCards = [...document.querySelectorAll("[data-project-card]")];
+const profileStats = document.querySelector(".profile-stats");
 const certificatePreviewButtons = [...document.querySelectorAll("[data-certificate-preview]")];
 const certificateDialog = document.getElementById("certificate-dialog");
 const certificateDialogTitle = document.getElementById("certificate-dialog-title");
@@ -21,6 +22,12 @@ const certificateDialogImage = document.getElementById("certificate-dialog-image
 const certificateDialogPdf = document.getElementById("certificate-dialog-pdf");
 const certificateDialogClose = document.getElementById("certificate-dialog-close");
 const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
+let profileStatsVisible = false;
+
+const syncProfileStatsMotion = () => {
+  if (!profileStats) return;
+  profileStats.classList.toggle("is-motion-active", profileStatsVisible && !document.hidden && !reducedMotion.matches);
+};
 
 const getPreferredTheme = () => {
   const savedTheme = localStorage.getItem("portfolio-theme");
@@ -203,7 +210,21 @@ if ("IntersectionObserver" in window) {
   }, { rootMargin: "-18% 0px -62%", threshold: 0.01 });
 
   projectCards.forEach((card) => stackObserver.observe(card));
+
+  if (profileStats) {
+    const profileStatsObserver = new IntersectionObserver(([entry]) => {
+      profileStatsVisible = entry.isIntersecting;
+      syncProfileStatsMotion();
+    }, { rootMargin: "80px 0px", threshold: 0.08 });
+
+    profileStatsObserver.observe(profileStats);
+  }
 } else {
   document.querySelectorAll("[data-reveal]").forEach((element) => element.classList.add("is-visible"));
   splitRevealElements.forEach((element) => element.classList.add("is-visible"));
+  profileStatsVisible = true;
+  syncProfileStatsMotion();
 }
+
+document.addEventListener("visibilitychange", syncProfileStatsMotion);
+reducedMotion.addEventListener?.("change", syncProfileStatsMotion);

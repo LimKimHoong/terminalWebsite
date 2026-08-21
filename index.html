@@ -13,7 +13,7 @@
     <link rel="preload" href="assets/img/icon/me_4.jpg" as="image">
     <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@primer/css@22.3.0/dist/primer.css">
-    <link rel="stylesheet" href="./assets/css/styles.css?v=20260821.13">
+    <link rel="stylesheet" href="./assets/css/styles.css?v=20260821.17">
 
     <title>Lim Kim Hoong | Applied Intelligence</title>
 </head>
@@ -44,7 +44,12 @@
                 </ul>
             </div>
 
-            <button class="theme-toggle btn" id="theme-button" type="button" aria-label="Switch color theme">
+            <button class="theme-toggle" id="theme-button" type="button" aria-label="Switch color theme">
+                <span class="theme-toggle__orbit" aria-hidden="true"></span>
+                <svg class="theme-toggle__sparkle" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                    <path d="M12 2.5 13.7 8.3 19.5 10 13.7 11.7 12 17.5 10.3 11.7 4.5 10 10.3 8.3 12 2.5Z"></path>
+                    <path d="m18.25 15.75.75 2.5 2.5.75-2.5.75-.75 2.5-.75-2.5L15 19l2.5-.75.75-2.5Z"></path>
+                </svg>
                 <span class="theme-toggle__label">Dark</span>
             </button>
         </nav>
@@ -353,7 +358,7 @@
                 <p>Four reminders that shape how I approach difficult work.</p>
             </div>
             <div class="quote-grid" data-reveal="stagger">
-                <blockquote class="quote-grid__primary"><p>“Simplicity is the ultimate sophistication.”</p><footer><strong>Leonardo da Vinci</strong><span>Artist and engineer</span></footer></blockquote>
+                <blockquote><p>“Nothing is as boring as everyone agreeing with you.”</p><footer><strong>Michel Eyquem de Montaigne</strong><span>French writer</span></footer></blockquote>
                 <blockquote><p>“You don’t learn to walk by following rules. You learn by doing, and by falling over.”</p><footer><strong>Richard Branson</strong><span>Founder, Virgin Group</span></footer></blockquote>
                 <blockquote><p>“Mistakes are always forgivable, if one has the courage to admit them.”</p><footer><strong>Bruce Lee</strong><span>Martial artist and actor</span></footer></blockquote>
                 <blockquote><p>“Do what you can, with what you have, where you are.”</p><footer><strong>Theodore Roosevelt</strong><span>26th U.S. President</span></footer></blockquote>
@@ -399,6 +404,6 @@
     </dialog>
 
     <noscript><p class="noscript-message">JavaScript is optional, but it enables the theme switcher, tabs, terminal commands, and certificate previews.</p></noscript>
-    <script src="./assets/js/main.js?v=20260821.12"></script>
+    <script src="./assets/js/main.js?v=20260821.13"></script>
 </body>
 </html>
